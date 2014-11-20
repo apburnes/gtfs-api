@@ -1,0 +1,105 @@
+route_id,route_short_name,route_long_name,route_type
+1,1,"Washington",3
+3,3,"Van Buren",3
+7,7,"7th Street",3
+8,8,"7th Avenue",3
+10,10,"Roosevelt/32nd Street",3
+12,12,"12th Street",3
+13,13,"Buckeye",3
+15,15,"15th Avenue",3
+16,16,"16th Street",3
+17,17,"McDowell",3
+19,19,"19th Avenue",3
+27,27,"27th Avenue",3
+28,28,"Lower Buckeye",3
+29,29,"Thomas",3
+30,30,"University",3
+35,35,"35th Avenue",3
+39,39,"40th Street North Phoenix",3
+40,40,"Apache/Main",3
+41,41,"Indian School",3
+43,43,"43rd Avenue",3
+44,44,"44th Street/Tatum",3
+45,45,"Broadway",3
+48,48,"48th Street",3
+50,50,"Camelback",3
+51,51,"51st Avenue",3
+52,52,"Roeser",3
+56,56,"Priest",3
+59,59,"59th Avenue",3
+60,60,"Bethany Home",3
+61,61,"Southern",3
+62,62,"Hardy",3
+65,65,"Mill/Kyrene",3
+66,66,"Mill/68th Street",3
+67,67,"67th Avenue",3
+70,70,"Glendale/24th Street",3
+72,72,"Scottsdale/Rural",3
+75,75,"75th Avenue",3
+77,77,"Baseline",3
+80,80,"Northern/Shea",3
+81,81,"Hayden/McClintock",3
+83,83,"83rd Avenue",3
+90,90,"Dunlap/Cave Creek",3
+96,96,"Dobson",3
+104,104,"Alma School",3
+106,106,"Peoria",3
+108,108,"Elliot/48th Street",3
+112,112,"Country Club/Arizona Ave",3
+120,120,"Mesa Drive",3
+122,122,"Cactus",3
+128,128,"Stapley",3
+136,136,"Gilbert Rd",3
+138,138,"Thunderbird",3
+154,154,"Greenway",3
+156,156,"Chandler Blvd",3
+170,170,"Bell",3
+184,184,"Power",3
+186,186,"Union Hills/Mayo",3
+251,251,"51st Ave/Baseline",3
+514,514,"Scottsdale Express",3
+520,520,"Tempe Express",3
+521,521,"Tempe Express",3
+522,522,"Tempe Express",3
+531,531,"Mesa/Gilbert Express",3
+533,533,"Mesa Express",3
+535,535,"Red Mountain Express",3
+541,541,"Chandler Express",3
+542,542,"Chandler Express",3
+562,562,"Goodyear Express",3
+563,563,"Avondale/Buckeye Express",3
+571,571,"Surprise Express",3
+573,573,"Northwest Valley Express",3
+575,575,"Northwest Valley Express",3
+685,685,"Phoenix/Gila Bend Regional Connector",3
+ALEX,ALEX,"Ahwatukee Circulator",3
+AVCR,AVCR,"Avondale Circulator",3
+AZAV,AZAV,"Arizona Avenue Link",3
+CSM,CSM,"Central South Mountain Rapid",3
+DASG,DASG,"Downtown Area Shuttle (Government Loop)",3
+EART,EART,"Orbit Earth",3
+FLSH,FLSH,"McAllister",3
+FSHB,FSHB,"FLASH Back",3
+FSHF,FSHF,"FLASH Forward",3
+GAL,GAL,"Grand Avenue Limited",3
+GUS1,GUS1,"Glendale Urban Shuttle",3
+GUS2,GUS2,"Glendale Urban Shuttle",3
+GUS3,GUS3,"Glendale Urban Shuttle",3
+I10E,I10E,"I-10 East Rapid",3
+I10W,I10W,"I-10 West Rapid",3
+I17,I17,"I-17 Rapid",3
+JUPI,JUPI,"Orbit Jupiter",3
+LTRL,LTRL,"Metro Light Rail",0
+MAIN,MAIN,"Mesa Main Street BRT",3
+MARS,MARS,"Orbit Mars",3
+MARY,MARY,"Maryvale Area Route for You",3
+MERC,MERC,"Orbit Mercury",3
+METS,METS,"19th Avenue Connector",3
+MRT,MRT,"Miller Road Trolley",3
+BUZZ,BUZZ,"Downtown BUZZ",3
+SCDT,SCDT,"Scottsdale  Downtown Trolley",3
+SNTR,SNTR,"Scottsdale Neighborhood Trolley",3
+SR51,SR51,"SR-51 Rapid",3
+SSCR,SSCR,"Sunnyslope Multi Access Residential Transit",3
+VENU,VENU,"Orbit Venus",3
+ZERO,ZERO,"Central Avenue",3

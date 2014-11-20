@@ -1,0 +1,28 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "mgrt create",
+    "lint": "gulp lint",
+    "migrate": "mgrt up",
+    "reverse": "mgrt down",
+    "refresh": "mgrt refresh"
+  },
+  "author": "apburnes <bizzurnzz@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "mgrt": "^0.2.8",
+    "pg-copy-streams": "^0.3.0"
+  },
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "knex": "^0.7.3",
+    "lodash": "^2.4.1",
+    "pg.js": "^3.6.2"
+  }
+}
