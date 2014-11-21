@@ -29,6 +29,7 @@ exports.up = function(success, error) {
           error(err);
         }
 
+        console.log(file);
         done();
       });
     });

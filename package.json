@@ -14,15 +14,21 @@
   "author": "apburnes <bizzurnzz@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^1.10.0",
+    "chai-as-promised": "^4.1.1",
     "gulp": "^3.8.10",
     "gulp-jshint": "^1.9.0",
     "mgrt": "^0.2.8",
+    "mocha": "^2.0.1",
     "pg-copy-streams": "^0.3.0"
   },
   "dependencies": {
     "bluebird": "^2.3.11",
+    "hapi": "^7.5.2",
+    "joi": "^4.9.0",
     "knex": "^0.7.3",
     "lodash": "^2.4.1",
+    "lout": "^5.2.0",
     "pg.js": "^3.6.2"
   }
 }
