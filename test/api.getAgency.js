@@ -20,7 +20,7 @@ var agency = {
   id: 1
 };
 
-describe('Get Agency Query', function(){
+describe('Get Agency API Query', function(){
 
   it('should return an agency when passed a valid agency id integer with a promise', function(){
     return expect(api.getAgency(id))
