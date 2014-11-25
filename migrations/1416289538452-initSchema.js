@@ -7,8 +7,8 @@ var fs = Promise.promisifyAll(require('fs'));
 
 var path = require('path');
 
-var sqlUp = path.join(__dirname, '../sql/createSchema.sql');
-var sqlDown = path.join(__dirname, '../sql/dropSchema.sql');
+var sqlUp = path.join(__dirname, '../sqlMigrations/createSchema.sql');
+var sqlDown = path.join(__dirname, '../sqlMigrations/dropSchema.sql');
 
 exports.up = function(success, error) {
   fs.readFileAsync(sqlUp, 'utf-8')

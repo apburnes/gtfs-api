@@ -7,8 +7,8 @@ var fs = Promise.promisifyAll(require('fs'));
 
 var path = require('path');
 
-var sqlUp = path.join(__dirname, '../sql/createGeodata.sql');
-var sqlDown = path.join(__dirname, '../sql/dropGeodata.sql');
+var sqlUp = path.join(__dirname, '../sqlMigrations/createGeodata.sql');
+var sqlDown = path.join(__dirname, '../sqlMigrations/dropGeodata.sql');
 
 exports.up = function(success, error) {
   fs.readFileAsync(sqlUp, 'utf-8')
