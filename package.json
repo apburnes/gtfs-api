@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "gulp lint && mocha test/",
     "create": "mgrt create",
     "lint": "gulp lint",
     "migrate": "mgrt up",
@@ -29,6 +29,7 @@
     "knex": "^0.7.3",
     "lodash": "^2.4.1",
     "lout": "^5.2.0",
-    "pg.js": "^3.6.2"
+    "pg.js": "^3.6.2",
+    "require-dir": "^0.1.0"
   }
 }
