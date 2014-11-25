@@ -6,7 +6,9 @@ DROP COLUMN
 ALTER TABLE
   calendar_dates
 DROP COLUMN
-  id;
+  id,
+DROP COLUMN
+  agency_id;
 
 ALTER TABLE
   routes
@@ -14,9 +16,9 @@ DROP CONSTRAINT
   routes_pkey;
 
 ALTER TABLE
-  stop_times
+  routes
 DROP COLUMN
-  id;
+  agency_id;
 
 DROP INDEX IF EXISTS stop_times_trip_id_idx;
 DROP INDEX IF EXISTS stop_times_stop_id_idx;
@@ -24,22 +26,21 @@ DROP INDEX IF EXISTS stop_times_stop_id_idx;
 ALTER TABLE
   stops
 DROP COLUMN
-  id;
+  id,
+DROP COLUMN
+  agency_id;
 
 DROP INDEX IF EXISTS point_stops_stop_id_idx;
 DROP INDEX IF EXISTS point_stops_geom_idx;
-
-ALTER TABLE
-  point_stops
-DROP COLUMN
-  id;
 
 DROP TABLE IF EXISTS point_stops;
 
 ALTER TABLE
   trips
 DROP COLUMN
-  id;
+  id,
+DROP COLUMN
+  agency_id;
 
 DROP INDEX IF EXISTS trips_route_id_idx;
 DROP INDEX IF EXISTS trips_service_id_idx;

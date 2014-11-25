@@ -6,16 +6,37 @@ ADD COLUMN
 ALTER TABLE
   calendar_dates
 ADD COLUMN
-  id SERIAL PRIMARY KEY;
+  id SERIAL PRIMARY KEY,
+ADD COLUMN
+  agency_id INT;
+
+UPDATE
+  calendar_dates
+SET
+  agency_id = 1;
 
 ALTER TABLE
   routes
-ADD PRIMARY KEY (route_id);
+ADD PRIMARY KEY (route_id),
+ADD COLUMN
+  agency_id INT;
+
+UPDATE
+  routes
+SET
+  agency_id = 1;
 
 ALTER TABLE
   stop_times
 ADD COLUMN
-  id SERIAL PRIMARY KEY;
+  id SERIAL PRIMARY KEY,
+ADD COLUMN
+  agency_id INT;
+
+UPDATE
+  stop_times
+SET
+  agency_id = 1;
 
 CREATE INDEX stop_times_trip_id_idx ON stop_times (trip_id);
 CREATE INDEX stop_times_stop_id_idx ON stop_times (stop_id);
@@ -23,9 +44,18 @@ CREATE INDEX stop_times_stop_id_idx ON stop_times (stop_id);
 ALTER TABLE
   stops
 ADD COLUMN
-  id SERIAL PRIMARY KEY;
+  id SERIAL PRIMARY KEY,
+ADD COLUMN
+  agency_id INT;
+
+UPDATE
+  stops
+SET
+  agency_id = 1;
 
 SELECT
+  id,
+  agency_id,
   stop_id,
   stop_code,
   stop_namt AS stop_name,
@@ -36,18 +66,21 @@ INTO
 FROM
   stops;
 
-ALTER TABLE
-  point_stops
-ADD COLUMN
-  id SERIAL PRIMARY KEY;
-
+CREATE UNIQUE INDEX point_stops_id_idx ON point_stops (id);
 CREATE UNIQUE INDEX point_stops_stop_id_idx ON point_stops (stop_id);
 CREATE INDEX point_stops_geom_idx ON point_stops USING GIST (the_geom);
 
 ALTER TABLE
   trips
 ADD COLUMN
-  id SERIAL PRIMARY KEY;
+  id SERIAL PRIMARY KEY,
+ADD COLUMN
+  agency_id INT;
+
+UPDATE
+  trips
+SET
+  agency_id = 1;
 
 CREATE INDEX trips_route_id_idx ON trips (route_id);
 CREATE INDEX trips_service_id_idx ON trips (service_id);
@@ -71,3 +104,13 @@ Group By pts.shape_id;
 
 CREATE UNIQUE INDEX line_shapes_shape_id_idx ON line_shapes (shape_id);
 CREATE INDEX line_shapes_geom_idx ON line_shapes USING GIST (the_geom);
+
+ALTER TABLE
+  line_shapes
+ADD COLUMN
+  agency_id INT;
+
+UPDATE
+  line_shapes
+SET
+  agency_id = 1;
