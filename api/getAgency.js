@@ -1,12 +1,12 @@
 'use strict';
 
 var query = require('../query/index');
-var readSQL = require('../util/readSql')(__dirname, '../sqlApi/getAgency.sql');
+var readSql = require('../util/readSql')(__dirname, '../sqlApi/getAgency.sql');
 
 function getAgency(id, callback) {
   var params = [id];
 
-  return readSQL
+  return readSql
     .then(function(sql){
       return query(sql, params);
     })
