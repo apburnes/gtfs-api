@@ -4,7 +4,9 @@ var _ = require('lodash');
 var Promise = require('bluebird');
 var pg = require('pg.js');
 
-var client = new pg.Client(process.env.GTFS_URL);
+var config = require('../config');
+
+var client = new pg.Client(config.get('database').host);
 client.connect();
 
 function query(sql, params, callback) {

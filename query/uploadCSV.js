@@ -4,7 +4,9 @@ var fs = require('fs');
 var pg = require('pg.js');
 var copyFrom = require('pg-copy-streams').from;
 
-var client = new pg.Client(process.env.GTFS_URL);
+var config = require('../config');
+
+var client = new pg.Client(config.get('database').host);
 client.connect();
 
 function uploadCSV(destTable, filePath, done) {
