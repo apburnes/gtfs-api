@@ -15,7 +15,17 @@ Install Dependencies
 
 ## Migrate GTFS Data
 
+Migrate Data
+
 `npm run migrate`
+
+Reverse Migrations
+
+`npm run reverse`
+
+Refresh Migrations
+
+`npm run refresh`
 
 ## Test
 
