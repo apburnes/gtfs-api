@@ -29,7 +29,8 @@ var propertiesKeys = [
   'agency_id',
   'short_name',
   'long_name',
-  'route_type'
+  'route_type',
+  'trip_id'
 ];
 
 describe('Get Trip Geometry API Query', function() {

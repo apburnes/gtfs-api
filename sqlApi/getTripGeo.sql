@@ -1,11 +1,12 @@
 SELECT
- t.agency_id,
- t.service_id AS service,
- t.trip_headsign AS headsign,
- r.route_short_name AS short_name,
- r.route_long_name AS long_name,
- r.route_type AS route_type,
- ST_AsGeoJSON(s.the_geom) AS geojson
+  t.agency_id,
+  t.trip_id,
+  t.service_id AS service,
+  t.trip_headsign AS headsign,
+  r.route_short_name AS short_name,
+  r.route_long_name AS long_name,
+  r.route_type AS route_type,
+  ST_AsGeoJSON(s.the_geom) AS geojson
 FROM
   trips AS t,
   routes AS r,
