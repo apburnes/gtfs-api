@@ -16,7 +16,7 @@ var collectionKeys = [
   'features'
 ];
 
-describe('Get Routes Geometry API Query', function() {
+describe('API - Get Routes Geometry', function() {
 
   it('should return all agency routes feature collection geojson with a promise', function() {
     return expect(api.getRoutesGeo(filter))

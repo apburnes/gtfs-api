@@ -17,7 +17,7 @@ var notIdFilter = {
 
 var routes = require('./fixtures/routes');
 
-describe('Get Routes API Query', function() {
+describe('API - Get Routes', function() {
 
   it('should return routes when passed a valid filter object with a promise', function() {
     return expect(api.getRoutes(filter))

@@ -33,7 +33,7 @@ var propertiesKeys = [
   'trip_id'
 ];
 
-describe('Get Trip Geometry API Query', function() {
+describe('API - Get Trip Geometry', function() {
   it('should return a trip as geojson when passed a valid filter object as a promise', function() {
     return expect(api.getTripGeo(filter))
       .to.eventually.be.an('object')

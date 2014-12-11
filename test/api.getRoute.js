@@ -17,7 +17,7 @@ var route = _.find(require('./fixtures/routes'), {
   route_id: filter.route_id
 });
 
-describe('Get Route API Query', function() {
+describe('API - Get Route', function() {
 
   it('should return routes when passed a valid filter object with a promise', function() {
     return expect(api.getRoute(filter))
