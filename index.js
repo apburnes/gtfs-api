@@ -6,6 +6,7 @@ var server = new Hapi.Server('localhost', 8080);
 
 var plugins = [
   require('./routes/transitRoutes'),
+  require('./routes/transitStops'),
   require('lout')
 ];
 

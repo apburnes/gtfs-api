@@ -3,14 +3,7 @@
 var chai = require('chai');
 var expect = chai.expect;
 
-var Hapi = require('hapi');
-var server = new Hapi.Server('localhost', 8080);
-
-server.pack.register(require('../routes/transitRoutes'), function(err) {
-  if (err) {
-    console.log(err);
-  }
-});
+var server = require('../index');
 
 describe('Route - Transit Routes', function() {
 

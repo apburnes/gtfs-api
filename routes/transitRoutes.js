@@ -49,7 +49,7 @@ function register(server, options, next) {
 }
 
 register.attributes = {
-  name: 'agencyRoutesGeo',
+  name: 'TransitRoutes',
   version: '0.0.1'
 };
 
