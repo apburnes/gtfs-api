@@ -1,8 +1,22 @@
 {
-  "name": "clear",
+  "name": "gtfs-rest-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An API to discover and query Valley Metro transit routes.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:apburnes/gtfs-api.git"
+  },
+  "main": "server.js",
+  "keywords": [
+    "gtfs",
+    "rest",
+    "api",
+    "postgis"
+  ],
+  "engines": {
+    "node": ">=0.10.x",
+    "npm": ">=2.1.4"
+  },
   "scripts": {
     "test": "gulp lint && mocha test/",
     "create": "mgrt create",
