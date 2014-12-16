@@ -12,6 +12,16 @@ function register(server, options, next) {
           params: require('../validations/params').getStopsGeo
         }
       }
+    },
+    {
+      method: 'GET',
+      path: '/agency/{agency_id}/stop/{stop_id}/geo',
+      handler: require('../handlers/getStopGeo'),
+      config: {
+        validate: {
+          params: require('../validations/params').getStopGeo
+        }
+      }
     }
   ]);
 
