@@ -2,7 +2,8 @@
 
 var Hapi = require('hapi');
 
-var server = new Hapi.Server('localhost', 8080);
+var server = new Hapi.Server();
+server.connection({port: 8080});
 
 var plugins = [
   require('./routes/transitRoutes'),
@@ -10,7 +11,7 @@ var plugins = [
   require('lout')
 ];
 
-server.pack.register(plugins, function(err) {
+server.register(plugins, function(err) {
   if (err) {
     console.log(err);
   }

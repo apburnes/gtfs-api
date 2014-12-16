@@ -25,10 +25,10 @@
   "dependencies": {
     "bluebird": "^2.3.11",
     "convict": "^0.6.0",
-    "hapi": "^7.5.2",
+    "hapi": "^8.0.0",
     "joi": "^5.0.2",
     "lodash": "^2.4.1",
-    "lout": "^5.2.0",
+    "lout": "^6.0.1",
     "pg.js": "^3.6.2",
     "require-dir": "^0.1.0"
   }
