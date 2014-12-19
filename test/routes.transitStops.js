@@ -3,7 +3,11 @@
 var chai = require('chai');
 var expect = chai.expect;
 
-var server = require('../index');
+var path = require('path');
+var plugins = path.join(__dirname, '../');
+
+var Glue = require('glue');
+var manifest = require('../manifest');
 
 describe('Routes - Transit Stops', function() {
 
@@ -13,10 +17,12 @@ describe('Routes - Transit Stops', function() {
         url: '/agency/1/stops/geo'
       };
 
-      server.inject(options, function(res) {
-        expect(res.statusCode).to.be.equal(200);
-        expect(JSON.parse(res.payload)).to.be.an('object');
-        done();
+      Glue.compose(manifest, { relativeTo: plugins }, function(err, server) {
+        server.inject(options, function(res) {
+          expect(res.statusCode).to.be.equal(200);
+          expect(JSON.parse(res.payload)).to.be.an('object');
+          done();
+        });
       });
     });
 
@@ -25,9 +31,11 @@ describe('Routes - Transit Stops', function() {
         url: '/agency/bad/stops/geo'
       };
 
-      server.inject(options, function(res) {
-        expect(res.statusCode).to.be.equal(400);
-        done();
+      Glue.compose(manifest, { relativeTo: plugins }, function(err, server) {
+        server.inject(options, function(res) {
+          expect(res.statusCode).to.be.equal(400);
+          done();
+        });
       });
     });
 
@@ -36,9 +44,11 @@ describe('Routes - Transit Stops', function() {
         url: '/bad'
       };
 
-      server.inject(options, function(res) {
-        expect(res.statusCode).to.be.equal(404);
-        done();
+      Glue.compose(manifest, { relativeTo: plugins }, function(err, server) {
+        server.inject(options, function(res) {
+          expect(res.statusCode).to.be.equal(404);
+          done();
+        });
       });
     });
   });
@@ -49,9 +59,11 @@ describe('Routes - Transit Stops', function() {
         url: '/agency/1/stop/1950/geo'
       };
 
-      server.inject(options, function(res) {
-        expect(res.statusCode).to.be.equal(200);
-        done();
+      Glue.compose(manifest, { relativeTo: plugins }, function(err, server) {
+        server.inject(options, function(res) {
+          expect(res.statusCode).to.be.equal(200);
+          done();
+        });
       });
     });
 
@@ -60,9 +72,11 @@ describe('Routes - Transit Stops', function() {
         url: 'agency/bad/stop/1950/geo'
       };
 
-      server.inject(options, function(res) {
-        expect(res.statusCode).to.be.equal(400);
-        done();
+      Glue.compose(manifest, { relativeTo: plugins }, function(err, server) {
+        server.inject(options, function(res) {
+          expect(res.statusCode).to.be.equal(400);
+          done();
+        });
       });
     });
 
@@ -71,9 +85,11 @@ describe('Routes - Transit Stops', function() {
         url: 'agency/1/stop/bad/geo'
       };
 
-      server.inject(options, function(res) {
-        expect(res.statusCode).to.be.equal(400);
-        done();
+      Glue.compose(manifest, { relativeTo: plugins }, function(err, server) {
+        server.inject(options, function(res) {
+          expect(res.statusCode).to.be.equal(400);
+          done();
+        });
       });
     });
   });
