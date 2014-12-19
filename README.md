@@ -31,7 +31,7 @@ Refresh Migrations
 
 `npm run test`
 
-## API Docs with Lout
+## REST Endpoint Docs with Lout
 
 Thanks to the [lout](https://github.com/hapijs/lout) plugin, we can view the routes with the start of the server.
 
