@@ -31,6 +31,14 @@ Refresh Migrations
 
 `npm run test`
 
+## API Docs with Lout
+
+Thanks to the [lout](https://github.com/hapijs/lout) plugin, we can view the routes with the start of the server.
+
+`$ node server.js`
+
+Once the server is up, navigate to [http://localhost:8080/docs](http://localhost:8080/docs) to interactively browse the API endpoints.
+
 ## API
 
 ### getAgency
